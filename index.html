@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Ethan, CV, Portfolio">
+    <meta name="author" content="Ethan">
+    <meta name="description" content="Interactive CV - Ethan">
+    <title>Interactive CV - Ethan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'yellow': "#E3AE57",
+                        'grey-900': "#999999",
+                        'grey-800': "#888888",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <div class="w-full min-h-screen ">
+        <!-- Navbar -->
+        <nav class="fixed w-full top-0 flex flex-row items-center justify-between lg:px-20 px-8 lg:py-6 py-3 z-50"
+            id="navbar">
+            <div>
+                <a class="lg:text-3xl text-2xl font-semibold" href="/" style="text-shadow: 1px 1px #fff;">Ethan</a>
+            </div>
+            <ul class="navbar-menu hidden lg:flex lg:flex-row flex-col lg:items-center items-start lg:justify-center justify-between lg:px-0 px-8 lg:py-0 py-5 pb-5 lg:gap-8 gap-4"
+                id="navbar-menu">
+                <li class="home active">
+                    <a class="text-[#666666] lg:text-sm text-sm font-normal tracking-wide leading-none uppercase"
+                        href="#home">home</a>
+                </li>
+                <li class="about">
+                    <a class="text-[#666666] lg:text-sm text-sm font-normal tracking-wide leading-none uppercase"
+                        href="#about">about me</a>
+                </li>
+                <li class="activities">
+                    <a class="text-[#666666] lg:text-sm text-sm font-normal tracking-wide leading-none uppercase"
+                        href="#activities">Activities</a>
+                </li>
+                <li class="quotes">
+                    <a class="text-[#666666] lg:text-sm text-sm font-normal tracking-wide leading-none uppercase"
+                        href="#quotes">testimonial</a>
+                </li>
+                <li class="contact">
+                    <a class="text-[#666666] lg:text-sm text-sm font-normal tracking-wide leading-none uppercase"
+                        href="#contact">contact</a>
+                </li>
+            </ul>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="w-6 h-6 lg:hidden block cursor-pointer" onclick="ToogleMenu()">
+                <path fill-rule="evenodd"
+                    d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                    clip-rule="evenodd" />
+            </svg>
+        </nav>
+        <!-- Main Content -->
+        <main class="flex flex-col">
+            <!-- Home -->
+            <section class="grid lg:grid-cols-2 grid-cols-1 min-h-screen lg:mt-0 mt-8" id="home">
+                <div class="bg-[url(/assets/home-img.png)] bg-cover bg-center bg-no-repeat lg:min-h-auto min-h-[300px]">
+                </div>
+                <div
+                    class="flex flex-col justify-center bg-[#f1e2d7] lg:ps-10 ps-6 lg:pe-0 pe-4 lg:py-0 py-8 lg:pt-0 pt-6 gap-10">
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-black text-xs font-normal uppercase tracking-widest" data-aos="fade-up">WELCOME
+                            TO MY WEBSITE
+                        </h4>
+                        <h1 class="lg:text-5xl text-4xl font-light" data-aos="fade-up" data-aos-delay="450">Hello, I am
+                            <span class="font-medium">Ethan</span> currently based in ....</h1>
+                        <p class="lg:text-base text-sm text-black font-light" data-aos="fade-up" data-aos-delay="650">
+                            Donec auctor arcu at efficitur lacinia. Praesent bibendum efficitur ipsum, et mattis tellus
+                            interdum in. Ut a dictum purus. Vestibulum non pellentesque felis, sed dignissim urna.
+                            Vestibulum id accumsan quam.
+                        </p>
+                    </div>
+                    <button
+                        class="w-fit text-xs font-bold tracking-widest uppercase rounded-3xl border-2 border-black hover:border-yellow hover:bg-yellow hover:text-white px-8 py-3 transition-colors duration-500"
+                        data-aos="fade-up" data-aos-delay="650">get started</button>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section class="w-full grid lg:grid-cols-2 grid-cols-1 min-h-[400px] z-[5]" id="about">
+                <div class="flex flex-col justify-center bg-white lg:ps-10 ps-6 lg:pe-6 pe-4 lg:py-0 py-6 pb-8 gap-10">
+                    <div class="flex flex-col gap-4">
+                        <h1 class="lg:text-5xl text-4xl font-light" data-aos="fade-up">Donec auctor</h1>
+                        <h3 class="text-yellow lg:text-lg text-base font-light" data-aos="fade-up">Sed vulputate vitae
+                            diam quis bibendum</h3>
+                        <p class="lg:text-base text-sm text-black font-light" data-aos="fade-up">
+                            Donec auctor arcu at efficitur lacinia. Praesent bibendum efficitur ipsum, et mattis tellus
+                            Phasellus vulputate tellus nec tortor varius elementum. Curabitur at pulvinar ante. Duis dui
+                            urna, faucibus eget felis eu, iaculis congue sem. Mauris convallis eros massa. <br><br>
+                            Quisque viverra iaculis aliquam. Etiam volutpat, justo non aliquam bibendum, sem nibh mollis
+                            erat, quis porta odio odio at velit.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-2 grid-cols-1">
+                    <div
+                        class="bg-[url(/assets/about-img.png)] bg-cover lg:bg-center bg-top bg-no-repeat lg:min-h-auto min-h-[300px]">
+                    </div>
+                    <div class="flex flex-col justify-center bg-yellow px-10 py-8 gap-8">
+                        <div class="flex flex-col gap-4">
+                            <h1 class="text-white lg:text-5xl text-4xl font-light" data-aos="fade-up">My Skills</h1>
+                            <p class="lg:text-base text-sm text-white font-light" data-aos="fade-up">
+                                Programming . Music . Frontend Design
+                            </p>
+                        </div>
+                        <div class="flex flex-col text-base gap-5">
+                            <div class="flex flex-col gap-1" data-aos="fade-up">
+                                <div class="flex justify-between font-medium">
+                                    <p>Programming</p>
+                                    <p>84%</p>
+                                </div>
+                                <div class="progress bg-white rounded-xl">
+                                    <div class="w-[84%] h-[3px] bg-black rounded-xl"></div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1" data-aos="fade-up">
+                                <div class="flex justify-between font-medium">
+                                    <p>Music</p>
+                                    <p>80%</p>
+                                </div>
+                                <div class="progress bg-white rounded-xl">
+                                    <div class="w-[80%] h-[3px] bg-black rounded-xl"></div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1" data-aos="fade-up">
+                                <div class="flex justify-between font-medium">
+                                    <p>Frontend Design</p>
+                                    <p>90%</p>
+                                </div>
+                                <div class="progress bg-white rounded-xl">
+                                    <div class="w-[90%] h-[3px] bg-black rounded-xl"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--  -->
+            <div class="h-fit grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
+                <div class="flex flex-col items-center justify-center bg-yellow text-white fill-white p-10 gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="lg:w-16 w-12 lg:h-16 h-12" height="16" width="12" viewBox="0 0 384 512" data-aos="fade-up"><path d="M14 95.8C14 42.9 56.9 0 109.8 0H274.2C327.1 0 370 42.9 370 95.8C370 129.3 352.8 158.8 326.7 175.9C352.8 193 370 222.5 370 256C370 308.9 327.1 351.8 274.2 351.8H272.1C247.3 351.8 224.7 342.4 207.7 326.9V415.2C207.7 468.8 163.7 512 110.3 512C57.5 512 14 469.2 14 416.2C14 382.7 31.2 353.2 57.2 336.1C31.2 319 14 289.5 14 256C14 222.5 31.2 193 57.2 175.9C31.2 158.8 14 129.3 14 95.8zM176.3 191.6H109.8C74.2 191.6 45.4 220.4 45.4 256C45.4 291.4 74 320.2 109.4 320.4C109.5 320.4 109.7 320.4 109.8 320.4H176.3V191.6zM207.7 256C207.7 291.6 236.5 320.4 272.1 320.4H274.2C309.7 320.4 338.6 291.6 338.6 256C338.6 220.4 309.7 191.6 274.2 191.6H272.1C236.5 191.6 207.7 220.4 207.7 256zM109.8 351.8C109.7 351.8 109.5 351.8 109.4 351.8C74 352 45.4 380.8 45.4 416.2C45.4 451.7 74.6 480.6 110.3 480.6C146.6 480.6 176.3 451.2 176.3 415.2V351.8H109.8zM109.8 31.4C74.2 31.4 45.4 60.2 45.4 95.8C45.4 131.4 74.2 160.2 109.8 160.2H176.3V31.4H109.8zM207.7 160.2H274.2C309.7 160.2 338.6 131.4 338.6 95.8C338.6 60.2 309.7 31.4 274.2 31.4H207.7V160.2z"/></svg>
+                    <div class="flex flex-col items-center justify-center gap-2" data-aos="fade-up">
+                        <h1 class="text-[26px] font-light">Interactive Design</h1>
+                        <p class="text-center lg:text-lg text-base font-light">
+                            Mauris convallis dsda asa da daallis eros massa, vitae euismod arcu tempus ut. Quisque viverra iaculis.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-[#E9724C] text-white p-10 gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="lg:w-16 w-12 lg:h-16 h-12" data-aos="fade-up">
+                        <path fill-rule="evenodd"
+                            d="M10.5 3.798v5.02a3 3 0 01-.879 2.121l-2.377 2.377a9.845 9.845 0 015.091 1.013 8.315 8.315 0 005.713.636l.285-.071-3.954-3.955a3 3 0 01-.879-2.121v-5.02a23.614 23.614 0 00-3 0zm4.5.138a.75.75 0 00.093-1.495A24.837 24.837 0 0012 2.25a25.048 25.048 0 00-3.093.191A.75.75 0 009 3.936v4.882a1.5 1.5 0 01-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0115 8.818V3.936z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <div class="flex flex-col items-center justify-center gap-2" data-aos="fade-up">
+                        <h1 class="text-[26px] font-light">Science</h1>
+                        <p class="text-center lg:text-lg text-base font-light">
+                            Mauris convallis eros massa, vitae euismod arcu tempus ut. Quisque viverra iaculis.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-[#161616] text-white fill-white p-10 gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="lg:w-16 w-12 lg:h-16 h-12" height="16" width="16" viewBox="0 0 512 512" data-aos="fade-up"><path d="M465 7c-9.4-9.4-24.6-9.4-33.9 0L383 55c-2.4 2.4-4.3 5.3-5.5 8.5l-15.4 41-77.5 77.6c-45.1-29.4-99.3-30.2-131 1.6c-11 11-18 24.6-21.4 39.6c-3.7 16.6-19.1 30.7-36.1 31.6c-25.6 1.3-49.3 10.7-67.3 28.6C-16 328.4-7.6 409.4 47.5 464.5s136.1 63.5 180.9 18.7c17.9-17.9 27.4-41.7 28.6-67.3c.9-17 15-32.3 31.6-36.1c15-3.4 28.6-10.5 39.6-21.4c31.8-31.8 31-85.9 1.6-131l77.6-77.6 41-15.4c3.2-1.2 6.1-3.1 8.5-5.5l48-48c9.4-9.4 9.4-24.6 0-33.9L465 7zM208 256a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                    <div class="flex flex-col items-center justify-center gap-2" data-aos="fade-up">
+                        <h1 class="text-[26px] font-light">Music</h1>
+                        <p class="text-center lg:text-lg text-base font-light">
+                            Mauris convallis eros massa, vitae euismod arcu tempus ut. Quisque viverra iaculis.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white text-black p-10 gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="lg:w-16 w-12 lg:h-16 h-12" data-aos="fade-up">
+                        <path fill-rule="evenodd"
+                            d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <div class="flex flex-col items-center justify-center gap-2" data-aos="fade-up">
+                        <h1 class="text-[26px] font-light">Coding</h1>
+                        <p class="text-center lg:text-lg text-base font-light">
+                            Mauris convallis eros massa, vitae euismod arcu tempus ut. Quisque viverra iaculis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Acitivities -->
+            <section class="w-full" id="activities">
+                <div class="grid lg:grid-cols-2 grid-cols-1 min-h-[400px]">
+                    <div
+                        class="bg-[url(/assets/experience-img.png)] bg-cover bg-center bg-no-repeat lg:min-h-auto min-h-[300px]">
+                    </div>
+                    <div class="flex flex-col justify-center bg-[#E9724C] lg:px-10 px-8 py-8 gap-6">
+                        <h1 class="text-white lg:text-5xl text-4xl font-light" data-aos="fade-up">My Activities</h1>
+                        <!-- <p class="lg:text-base text-sm text-white font-light" data-aos="fade-up">
+                            Photoshop . HTML CSS JS . Web Design
+                        </p> -->
+                        <div class="grid grid-cols-1 lg:gap-6 gap-6">
+                            <div class="grid grid-cols-1 gap-1" data-aos="fade-up">
+                                <div class="grid grid-cols-12 lg:gap-0 gap-2">
+                                    <div class="col-span-1 flex items-center justify-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-8 h-8 text-white">
+                                            <path
+                                                d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
+                                            <path
+                                                d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" />
+                                            <path
+                                                d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
+                                        </svg>
+                                    </div>
+                                    <div class="col-span-11 flex items-center justify-start">
+                                        <h1 class="text-white lg:text-2xl text-xl font-medium">Grade 9 <span
+                                                class="lg:text-sm text-xs font-light">(Year 2020 - 2021, during
+                                                pandemic)</span></h1>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-12 lg:gap-0 gap-2">
+                                    <div class="col-span-1 flex items-center justify-start"></div>
+                                    <div class="col-span-11 flex items-center justify-start">
+                                        <ol class="text-white list-decimal list-outside font-normal ms-[1rem]">
+                                            <li>JavaScript and C++</li>
+                                            <li>Harvard Debate Tournament (Southeast Asia)</li>
+                                            <li>Intro to Coding Principles & programming with Python</li>
+                                            <li>Guitar Lesson</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 gap-1" data-aos="fade-up">
+                                <div class="grid grid-cols-12 lg:gap-0 gap-2">
+                                    <div class="col-span-1 flex items-center justify-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-8 h-8 text-white">
+                                            <path
+                                                d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
+                                            <path
+                                                d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" />
+                                            <path
+                                                d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
+                                        </svg>
+                                    </div>
+                                    <div class="col-span-11 flex items-center justify-start">
+                                        <h1 class="text-white lg:text-2xl text-xl font-medium">Grade 10 <span
+                                                class="lg:text-sm text-xs font-light">(Year 2021 - 2022, during
+                                                pandemic)</span></h1>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-12 lg:gap-0 gap-2">
+                                    <div class="col-span-1 flex items-center justify-start"></div>
+                                    <div class="col-span-11 flex items-center justify-start">
+                                        <ol class="text-white list-decimal list-outside font-normal ms-[1rem]">
+                                            <li>Robotics Engineering & Coding lab with VEX</li>
+                                            <li>KOMIB Social Activities</li>
+                                            <li>Boxing club and rock climbing </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-2 grid-cols-1 min-h-fit">
+                    <div class="flex flex-col justify-center bg-yellow lg:px-10 px-8 py-8 gap-6">
+                        <div class="grid grid-cols-1 lg:gap-6 gap-6">
+                            <div class="grid grid-cols-1 gap-1" data-aos="fade-up">
+                                <div class="grid grid-cols-12 lg:gap-0 gap-2">
+                                    <div class="col-span-1 flex items-center justify-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-8 h-8 text-white">
+                                            <path
+                                                d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
+                                            <path
+                                                d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" />
+                                            <path
+                                                d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
+                                        </svg>
+                                    </div>
+                                    <div class="col-span-11 flex items-center justify-start">
+                                        <h1 class="text-white lg:text-2xl text-xl font-medium">Grade 11 <span
+                                                class="lg:text-sm text-xs font-light">(Year 2022 - 2023)</span></h1>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-12 lg:gap-0 gap-2">
+                                    <div class="col-span-1 flex items-center justify-start"></div>
+                                    <div class="col-span-11 flex flex-col items-start justify-start">
+                                        <ol class="text-white list-decimal list-outside font-normal ms-[1rem]">
+                                            <li>KOMIB Social Activities: a key speaker to introduce KOMIB in Malaysia,
+                                                to the Indonesian Government & G20</li>
+                                            <li>Visited & helped earthquake casualties in Garut, West Java, gave charity
+                                                to 2,000 orphan kids (received Muri record (elaborate!!!))</li>
+                                            <li>Making a project: "Robotic Dog Feeder"</li>
+                                            <li>AI Scholars program*</li>
+                                            <li>KOMIB</li>
+                                            <li>Piano Lesson</li>
+                                        </ol>
+                                        <p class="text-white italic leading-none mt-4">* Intensive AI program for high
+                                            schoolers run by Harvard graduate students</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 gap-1" data-aos="fade-up">
+                                <div class="grid grid-cols-12 lg:gap-0 gap-2">
+                                    <div class="col-span-1 flex items-center justify-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-8 h-8 text-white">
+                                            <path
+                                                d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
+                                            <path
+                                                d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" />
+                                            <path
+                                                d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
+                                        </svg>
+                                    </div>
+                                    <div class="col-span-11 flex items-center justify-start">
+                                        <h1 class="text-white lg:text-2xl text-xl font-medium">Grade 12 <span
+                                                class="lg:text-sm text-xs font-light">(Year 2023 - 2024)</span></h1>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-12 lg:gap-0 gap-2">
+                                    <div class="col-span-1 flex items-center justify-start"></div>
+                                    <div class="col-span-11 flex flex-col items-start justify-start">
+                                        <ol class="text-white list-decimal list-outside font-normal ms-[1rem]">
+                                            <li>Coding Club</li>
+                                            <li>Engineering Club</li>
+                                            <li>KOMIB</li>
+                                            <li>Violin Lesson</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-[url(/assets/education-img.png)] bg-cover bg-center bg-no-repeat lg:min-h-auto min-h-[300px]">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quotes -->
+            <section class="parallax-section h-[400px]" id="quotes">
+                <div class="overlay flex flex-items-center justify-center">
+                    <div class="h-auto lg:w-[60%] w-[90%] flex flex-col items-center justify-center gap-4">
+                        <div class="flex flex-col items-center gap-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-14 h-14" data-aos="fade-up">
+                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                            </svg>
+                            <div class="flex flex-col text-center lg:gap-12 gap-8" data-aos="fade-up">
+                                <h2 class="lg:text-[42px] text-[28px] font-light leading-tight">Proin lobortis eu diam et facilisis. Fusce nisi nibh, molestie in vestibulum quis, auctor et orci.</h2>
+                                <p class="text-gray-400 font-light">Curabitur at pulvinar ante. Duis dui urna, faucibus eget felis eu, iaculis congue sem.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <!-- Contact -->
+            <section class="w-full hidden lg:grid-cols-2 grid-cols-1 min-h-[400px] z-[5]" id="contact">
+                <div
+                    class="flex flex-col justify-center bg-[#E9724C] lg:ps-10 ps-6 lg:pe-6 pe-4 lg:py-0 py-6 pb-8 gap-10">
+                    <div class="flex flex-col gap-4">
+                        <h1 class="text-white lg:text-5xl text-4xl font-light" data-aos="fade-up">Say Hello...</h1>
+                        <p class="lg:text-base text-sm text-white font-light" data-aos="fade-up">
+                            Integer ut consectetur est. In cursus orci non ipsum gravida dignissim.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-2 grid-cols-1">
+                    <div
+                        class="bg-[url(/assets/contact-img.png)] bg-cover lg:bg-center bg-top bg-no-repeat lg:min-h-auto min-h-[250px]">
+                    </div>
+                    <div class="flex flex-col justify-center bg-[#161616] px-10 py-8 gap-8">
+                        <div class="flex flex-col gap-4">
+                            <h1 class="text-white lg:text-2xl text-xl font-light" data-aos="fade-up">Contact</h1>
+                            <div class="flex flex-col text-[#888888] gap-3">
+                                <div class="flex items-center gap-2" data-aos="fade-up">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-5 h-5">
+                                        <path fill-rule="evenodd"
+                                            d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <p>+123 456 789</p>
+                                </div>
+                                <div class="flex items-center gap-2" data-aos="fade-up">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-5 h-5">
+                                        <path
+                                            d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                                        <path
+                                            d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                                    </svg>
+                                    <a class="text-yellow" href="mailto:ethan@example.com">ethan@example.com</a>
+                                </div>
+                                <div class="flex items-center gap-2" data-aos="fade-up">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-5 h-5">
+                                        <path
+                                            d="M15.75 8.25a.75.75 0 01.75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 11-.992-1.124A2.243 2.243 0 0015 9a.75.75 0 01.75-.75z" />
+                                        <path fill-rule="evenodd"
+                                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM4.575 15.6a8.25 8.25 0 009.348 4.425 1.966 1.966 0 00-1.84-1.275.983.983 0 01-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 012.328-.377L16.5 15h.628a2.25 2.25 0 011.983 1.186 8.25 8.25 0 00-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.575 15.6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <a class="text-yellow" href="https://ethan.co">ethan.co</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <section class="lg:h-80 h-52 flex flex-col items-center justify-center gap-6" id="">
+                <div class="flex flex-col gap-4" data-aos="fade-up">
+                    <h6 class="text-[#888888] lg:text-lg text-base">Copyright © 2023 <span class="font-semibold">Ethan</span></h6>
+                </div>
+                <div class="flex flex-row fill-[#888888] gap-4" data-aos="fade-up">
+                    <a class="cursor-pointer w-14 h-14 flex items-center justify-center rounded-full hover:bg-yellow hover:fill-white transition-colors duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-auto" height="16" width="10" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+                    </a>
+                    <a class="cursor-pointer w-14 h-14 flex items-center justify-center rounded-full hover:bg-yellow hover:fill-white transition-colors duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-auto" height="16" width="16" viewBox="0 0 512 512"><path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/></svg>
+                    </a>
+                    <a class="cursor-pointer w-14 h-14 flex items-center justify-center rounded-full hover:bg-yellow hover:fill-white transition-colors duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-auto" height="16" width="20" viewBox="0 0 640 512"><path d="M386.1 228.5c1.8 9.7 3.1 19.4 3.1 32C389.2 370.2 315.6 448 204.8 448c-106.1 0-192-85.9-192-192s85.9-192 192-192c51.9 0 95.1 18.9 128.6 50.3l-52.1 50c-14.1-13.6-39-29.6-76.5-29.6-65.5 0-118.9 54.2-118.9 121.3 0 67.1 53.4 121.3 118.9 121.3 76 0 104.5-54.7 109-82.8H204.8v-66h181.3zm185.4 6.4V179.2h-56v55.7h-55.7v56h55.7v55.7h56v-55.7H627.2v-56h-55.7z"/></svg>
+                    </a>
+                    <a class="cursor-pointer w-14 h-14 flex items-center justify-center rounded-full hover:bg-yellow hover:fill-white transition-colors duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-auto" height="16" width="16" viewBox="0 0 512 512"><path d="M256 8C119.3 8 8 119.3 8 256s111.3 248 248 248 248-111.3 248-248S392.7 8 256 8zm164 114.4c29.5 36 47.4 82 47.8 132-7-1.5-77-15.7-147.5-6.8-5.8-14-11.2-26.4-18.6-41.6 78.3-32 113.8-77.5 118.3-83.5zM396.4 97.9c-3.8 5.4-35.7 48.3-111 76.5-34.7-63.8-73.2-116.2-79-124 67.2-16.2 138 1.3 190.1 47.5zm-230.5-33.3c5.6 7.7 43.4 60.1 78.5 122.5-99.1 26.3-186.4 25.9-195.8 25.8C62.4 147.2 106.7 92.6 165.9 64.6zM44.2 256.3c0-2.2 0-4.3 .1-6.5 9.3 .2 111.9 1.5 217.7-30.1 6.1 11.9 11.9 23.9 17.2 35.9-76.6 21.6-146.2 83.5-180.5 142.3C64.8 360.4 44.2 310.7 44.2 256.3zm81.8 167.1c22.1-45.2 82.2-103.6 167.6-132.8 29.7 77.3 42 142.1 45.2 160.6-68.1 29-150 21.1-212.8-27.9zm248.4 8.5c-2.2-12.9-13.4-74.9-41.2-151 66.4-10.6 124.7 6.8 131.9 9.1-9.4 58.9-43.3 109.8-90.8 142z"/></svg>
+                    </a>
+                    <a class="cursor-pointer w-14 h-14 flex items-center justify-center rounded-full hover:bg-yellow hover:fill-white transition-colors duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-auto" height="16" width="14" viewBox="0 0 448 512"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+
+</html>
